@@ -97,10 +97,10 @@ const Dashboard = () => {
               >
                 <div className="container py-3">
                   <InformDiv />
-                  {/* <Heading
+                  <Heading
                     selectedTab={selectedTab}
                     headingDesc={headingDesc}
-                  /> */}
+                  />
                   <Main
                     selectedTab={selectedTab}
                     setSelectedTab={setSelectedTab}

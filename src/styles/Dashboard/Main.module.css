@@ -12,17 +12,20 @@
   font-weight: 600;
   font-size: 18px;
   line-height: 22px;
-  display: flex;
-  align-items: center;
 
   background: #000000;
   border-radius: 5px;
   color: white;
-
-  padding: 0.7rem 2rem;
+  padding: 0.7rem 0;
+  white-space: nowrap;
+  width: 20%;
+  text-align: center;
 }
 
 .btn_unselected {
+  text-align: center;
+  width: 20%;
+  white-space: nowrap;
   border: none;
   font-style: normal;
   font-weight: 400;
@@ -30,14 +33,11 @@
   line-height: 22px;
   /* identical to box height */
 
-  display: flex;
-  align-items: center;
-
   background: rgba(139, 155, 172, 0.2);
   border-radius: 5px;
 
   color: #5c5b5b;
-  padding: 0.7rem 2rem;
+  padding: 0.7rem 0;
 }
 
 .v1 {
