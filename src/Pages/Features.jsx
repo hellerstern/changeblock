@@ -5,17 +5,23 @@ import BusinessIdeasSection from "../Components/Home/BusinessIdeasSection";
 import GetToKnowSection from "../Components/Home/GetToKnowSection";
 import FeaturesHero from "../Components/Features/FeaturesHero";
 import FeaturesDetail from "../Components/Features/FeaturesDetail";
+import styled from "styled-components";
 
 const Features = () => {
   return (
-    <div>
+    <Wrapper>
       <Navbar />
       <FeaturesHero />
-      <FeaturesDetail/>
+      <FeaturesDetail />
       <GetToKnowSection />
       <Footer />
-    </div>
+    </Wrapper>
   );
 };
+
+const Wrapper = styled.div`
+  /* max-width: 1440px;
+  margin: auto; */
+`;
 
 export default Features;

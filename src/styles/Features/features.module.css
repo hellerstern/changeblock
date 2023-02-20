@@ -1,46 +1,80 @@
+.detail_container {
+  padding: 100px 100px 0;
+  max-width: 1440px;
+  margin: auto;
+}
+
 .features_hero {
-    background-image: url("../../../public//images/features-bg.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 600px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    /* filter: brightness(40%); */
+  background-image: url("../../../public//images/features-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 0%;
+
+  /* filter: brightness(40%); */
+}
+
+.features_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+  max-width: 1440px;
+  margin: auto;
 }
 
 .features_hero_heading {
-    font-size: 48px;
-    font-weight: 800px;
-    color: #ffffff;
-    line-height: 58px;
-    text-align: center;
-    width: 45%;
-    margin-bottom: 20px;
+  font-size: 48px;
+  font-weight: 800px;
+  color: #ffffff;
+  line-height: 58px;
+  text-align: center;
+  width: 45%;
+  margin-bottom: 20px;
 }
 .features_hero_text {
-    font-size: 18px;
-    font-weight: 500px;
-    color: #ffffff;
-    text-align: center;
-    width: 45%;
+  font-size: 18px;
+  font-weight: 500px;
+  color: #ffffff;
+  text-align: center;
+  width: 45%;
 }
 .features_detail_heading {
-    font-size: 24px;
-    font-weight: 600;
-    color: #000000;
-    margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 20px;
 }
 .features_detail_text {
-    font-size: 16px;
-    font-weight: 400;
-    color: #5c5b5b;
-    line-height: 130%;
+  font-size: 16px;
+  font-weight: 400;
+  color: #5c5b5b;
+  line-height: 130%;
 }
 .features_detail_container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 120px;
+  gap: 90px;
+}
+
+@media screen and (max-width: 1200px) {
+  .features_hero_heading {
+    width: 80%;
+  }
+  .features_hero_text {
+    width: 80%;
+  }
+  .features_detail_container {
+    flex-direction: column !important;
+    text-align: center;
+    gap: 40px;
+  }
+  .features_detail_container img {
+    width: 95%;
+  }
+  .detail_container {
+    padding: 100px 50px;
+  }
 }

@@ -1,50 +1,50 @@
 .wrapper {
-    background: black;
+  background: black;
 }
 
 .wrapper > div > h3 {
-    font-style: normal;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 43px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 43px;
 
-    /* Main Color */
+  /* Main Color */
 
-    color: #05be70;
+  color: #05be70;
 }
 
 .wrapper > div > p {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 22px;
-    text-align: center;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
 
-    /* Gray */
+  /* Gray */
 
-    color: #8b9bac;
+  color: #8b9bac;
 
-    padding-top: 20px;
-    padding-bottom: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .wrapper > div > div > input {
-    background: #d9d9d9;
-    width: 30vw;
-    margin-right: 30px;
-    padding-left: 20px;
+  background: #d9d9d9;
 }
 
 .wrapper > div > div > button {
-    background: black;
-    color: white;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 14px 39px;
-    gap: 10px;
+  background: black;
+  color: white;
+  padding: 14px 39px;
 
-    /* White */
+  /* White */
 
-    border: 2px solid #ffffff;
+  border: 2px solid #ffffff;
 }
+
+/* @media screen and (max-width: 700px) {
+  .getToKnowSection-div-container {
+    flex-direction: column;
+    border: 1px solid red;
+  }
+} */

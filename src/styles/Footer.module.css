@@ -1,41 +1,46 @@
 .wrapper {
-    background: black;
-    border-top: 1px solid grey;
-    padding-top: 30px;
+  background: black;
+  border-top: 1px solid grey;
+  padding-top: 30px;
 }
 
 .wrapper > div > p {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 24px;
-    /* identical to box height, or 171% */
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  /* identical to box height, or 171% */
 
-    text-decoration-line: underline;
+  text-decoration-line: underline;
 
-    color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .wrapper > div:last-child {
-    margin-top: 1.5rem;
-    padding-bottom: 1.5rem;
+  margin-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 .wrapper > div > div > p {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 24px;
-    /* identical to box height, or 171% */
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  /* identical to box height, or 171% */
 
-    color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .links > a + a {
-    margin-left: 50px;
-    color: rgba(255, 255, 255, 0.698);
+  margin-left: 50px;
+  color: rgba(255, 255, 255, 0.698);
 }
 
 .links > a {
-    color: rgba(255, 255, 255, 0.698);
+  color: rgba(255, 255, 255, 0.698);
+  white-space: nowrap;
+}
+
+.link-container a {
+  /* white-space: nowrap; */
 }
