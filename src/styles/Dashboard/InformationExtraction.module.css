@@ -91,6 +91,10 @@
 
 .cv_template {
   background: #f2f8fb;
-  height: 450px;
+  height: 200px;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }

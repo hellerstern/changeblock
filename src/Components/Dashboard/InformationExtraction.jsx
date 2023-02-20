@@ -1,9 +1,11 @@
+import styled from "styled-components";
 import styles from "../../styles/Dashboard/InformationExtraction.module.css";
 import ChartBox from "./ChartBox";
 import { PDFDownloadLink } from "@react-pdf/renderer";
 import MyDocument from "./MyDocument";
 import { RotatingLines } from "react-loader-spinner";
 import FileUploader from "./FileUploader";
+import { IMG_FILE_UPLOAD } from "../../constants/images/images";
 
 const InformationExtraction = ({
   informationFile,
@@ -46,11 +48,8 @@ const InformationExtraction = ({
         <div className="row">
           <div className="col-5 text-center mt-4">
             <div className={styles.cv_template}>
-              <img
-                alt="cv template"
-                src="images/cv-template.png"
-                className="img-fluid pt-5"
-              />
+              <img src={IMG_FILE_UPLOAD} alt="upload button icon" />
+              <UploadLabel>Uploaded</UploadLabel>
             </div>
           </div>
           <div className="col-7 text-center">
@@ -100,5 +99,13 @@ const InformationExtraction = ({
     </div>
   );
 };
+
+const UploadLabel = styled.p`
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  margin-top: 10px;
+`;
 
 export default InformationExtraction;

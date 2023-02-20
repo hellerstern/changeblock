@@ -1,3 +1,4 @@
+import styled from "styled-components";
 import styles from "../../styles/Dashboard/Main.module.css";
 import ChartBox from "./ChartBox";
 import Prediction from "./Prediction";
@@ -15,6 +16,7 @@ import { PDFDownloadLink } from "@react-pdf/renderer";
 import MyDocument from "./MyDocument";
 import { CSVLink } from "react-csv";
 import FileUploader from "./FileUploader";
+import { IMG_FILE_UPLOAD } from "../../constants/images/images";
 import Modal from "react-modal";
 
 const customStyles = {
@@ -508,11 +510,13 @@ const Main = ({ selectedTab, setSelectedTab }) => {
                 <div className="row">
                   <div className="col-5 text-center mt-4">
                     <div className={styles.cv_template}>
-                      <img
+                      <img src={IMG_FILE_UPLOAD} alt="upload button icon" />
+                      <UploadLabel>Uploaded</UploadLabel>
+                      {/* <img
                         alt="cv template"
                         src="images/cv-template.png"
                         className="img-fluid pt-5"
-                      />
+                      /> */}
                     </div>
                   </div>
                   <div className="col-7 text-center">
@@ -591,5 +595,13 @@ const Main = ({ selectedTab, setSelectedTab }) => {
     </div>
   );
 };
+
+const UploadLabel = styled.p`
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  margin-top: 10px;
+`;
 
 export default Main;
