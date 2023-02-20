@@ -1,0 +1,21 @@
+.wrapper {
+    background: #f2f4fb;
+}
+
+.heading {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 43px;
+    text-align: center;
+}
+
+.wrapper > div > div > div {
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.wrapper > div > div > div:hover {
+    background: #ffffff;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
+}

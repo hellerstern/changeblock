@@ -1,0 +1,26 @@
+.term_section{
+    padding: 100px 80px;
+    background-color: #EDEDED;
+}
+.term_heading{
+    font-size: 36px;
+    font-weight: 800;
+    color: #074208;
+}
+.date{
+    font-size: 16px;
+    color: #272443;
+    margin-top: 20px;
+    font-weight: 500px;
+}
+.term_paraHeading{
+    color: #333333;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom:15px;
+}
+.term_para{
+    font-size: 16px;
+    font-weight: 400;
+    color: #333333;
+}

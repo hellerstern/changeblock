@@ -1,0 +1,32 @@
+.ner_section {
+    background: #f2f4fb;
+}
+
+.heading {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 58px;
+    text-align: start;
+}
+
+.green_rect {
+    width: 30px;
+    height: 10px;
+    background-color: #05be70;
+    margin-bottom: 30px;
+}
+
+.readmore_btn {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 10px 30px;
+    gap: 10px;
+
+    /* Black 01 */
+
+    background: #000000;
+    border-radius: 5px;
+    color: white;
+}

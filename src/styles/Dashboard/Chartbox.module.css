@@ -1,0 +1,43 @@
+.box {
+    border: 1px solid rgba(139, 155, 172, 0.3);
+    border-radius: 5px;
+    margin-top: 3rem;
+}
+
+.heading {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+
+    /* Black 01 */
+
+    color: #000000;
+}
+
+.top_part {
+    background: #f3f5f7;
+    padding: 1.5rem 2rem;
+}
+
+.popout {
+    display: flex;
+    justify-content: end;
+    background: #05be70;
+    width: 100%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-radius: 5px;
+}
+
+.popoutBtn {
+    border: none;
+    margin-right: 2rem;
+    background-color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}

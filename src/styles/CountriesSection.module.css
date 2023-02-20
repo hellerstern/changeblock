@@ -1,0 +1,60 @@
+.wrapper {
+    position: relative;
+}
+
+.header_image {
+    position: relative;
+    width: 100%;
+    filter: brightness(40%);
+}
+
+.header_content {
+    position: absolute;
+    top: 57%;
+    left: 50%;
+    transform: translate(-90%, -50%);
+    color: white;
+}
+
+.header_countries {
+    position: absolute;
+    top: 57%;
+    left: 50%;
+    transform: translate(30%, -55%);
+    color: white;
+}
+
+.header_content > h3 {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 43px;
+
+    /* Main Color */
+
+    color: #05be70;
+}
+
+.header_content > p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+
+    /* Background color */
+
+    color: #f2f8fb;
+}
+
+.button_get_started {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 14px 30px;
+    gap: 10px;
+
+    background: #e4ec37;
+    /* White */
+
+    border: 2px solid #ffffff;
+}

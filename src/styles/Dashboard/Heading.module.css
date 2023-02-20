@@ -1,0 +1,31 @@
+.box {
+    background: #ffffff;
+    border: 1px solid rgba(92, 91, 91, 0.1);
+    border-radius: 5px;
+    padding: 2rem 3rem;
+}
+
+.box > div > p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 130%;
+    /* or 18px */
+
+    /* Gray Text */
+
+    color: #5c5b5b;
+}
+
+.box > div > h4 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+
+    color: #000000;
+}

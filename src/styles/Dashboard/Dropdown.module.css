@@ -1,0 +1,8 @@
+.list {
+    list-style: none;
+    right: 30%;
+}
+
+.name {
+    border-left: 1px solid #333;
+}

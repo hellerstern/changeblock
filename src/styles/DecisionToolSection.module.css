@@ -1,0 +1,30 @@
+.content {
+    margin-right: 50px;
+}
+
+.content > p {
+    text-align: justify;
+    text-justify: auto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.content > h5 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.header {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 58px;
+
+    /* Black 01 */
+
+    color: #000000;
+}

@@ -1,0 +1,40 @@
+.list > ul {
+  list-style: none;
+}
+
+.listitemUnselected {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 15px 17px;
+
+  color: #333333;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.listitemSelected {
+  overflow: hidden;
+  font-style: normal;
+  white-space: nowrap;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 15px 17px;
+  color: #ffffff;
+  background: #00c689;
+  border-radius: 5px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}

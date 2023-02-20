@@ -1,0 +1,96 @@
+.heading {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  /* identical to box height */
+
+  display: flex;
+  align-items: center;
+
+  color: #000000;
+}
+
+.btn {
+  border: none;
+  background: #00c689;
+  border-radius: 5px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  display: inline-block;
+  text-decoration: none;
+  align-items: center;
+
+  /* White */
+
+  color: #ffffff;
+  padding: 0.7rem 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.grey {
+  background: #f2f8fb;
+  height: 200px;
+  width: 100%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.upload_wrapper {
+  /* padding-top: 50px; */
+}
+
+.upload_btn {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  /* identical to box height */
+
+  color: #000000;
+  border: none;
+  background: none;
+}
+
+.browse {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+
+  /* Main Color */
+
+  color: #05be70;
+}
+
+.info_box {
+  width: 100%;
+  border: 1px solid rgba(139, 155, 172, 0.3);
+  height: 200px;
+  padding-top: 25px;
+}
+
+.info_text {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 36px;
+  /* identical to box height, or 200% */
+
+  text-align: center;
+
+  /* Gray Text */
+
+  color: #5c5b5b;
+}
+
+.cv_template {
+  background: #f2f8fb;
+  height: 450px;
+  width: 100%;
+}

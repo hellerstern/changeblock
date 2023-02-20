@@ -1,0 +1,21 @@
+.box {
+    /* White */
+
+    background: #ffffff;
+    border: 1px solid rgba(92, 91, 91, 0.1);
+    border-radius: 5px;
+    padding: 3rem;
+}
+
+.heading {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+
+    color: #000000;
+}

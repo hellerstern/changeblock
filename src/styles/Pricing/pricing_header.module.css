@@ -1,0 +1,44 @@
+.pricing_header{
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #F2F4FB;
+    height: 600px;
+}
+.princing_header_heading{
+    width: 80%;
+    text-align: center;
+    font-size: 48px;
+    color: #000000;
+    line-height: 57.6px;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+.princing_header_text{
+font-size: 20px;
+font-weight: 600;
+text-align: center;
+color: #000000;
+}
+.pricing_toggle{
+    background: #FFFFFF;
+border: 1px solid rgba(139, 155, 172, 0.2);
+border-radius: 5px;
+display: flex;
+padding: 23px 40px;
+margin-top: 20px;
+}
+.pricing_toggle p{
+    margin: 0;
+}
+.pricing_toggle_btn{
+    background-color:#05BE70;
+    border-radius:30px;
+    width:60px;
+    height: 25px;
+    padding: 3px 6px;
+    display: flex;
+    align-items: center;
+    margin: 0 20px;
+}

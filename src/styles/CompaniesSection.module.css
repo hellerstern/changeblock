@@ -1,0 +1,10 @@
+.horizontal_line {
+    border: 1px solid #cdd5e0;
+}
+
+.companies_heading {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+}

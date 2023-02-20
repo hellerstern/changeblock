@@ -1,0 +1,16 @@
+.faq_questiontag{
+    color: #000000;
+    font-size: 18px;
+    font-weight: 700px;
+}
+.faq_question {
+    padding: 20px 25px;
+    background: rgba(92, 91, 91, 0.08);
+    border-radius: 5px;
+    margin-bottom: 15px;
+  }
+  .faq_answer {
+font-size: 14px;
+font-weight: 500px;
+color: #333333; 
+width: 95%; }

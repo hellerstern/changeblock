@@ -1,0 +1,45 @@
+.wrapper {
+    background: #f2f4fb;
+}
+
+.wrapper > div {
+    margin-left: 5rem;
+}
+
+.btn_readmore {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 10px 30px;
+    gap: 10px;
+
+    /* Black 01 */
+
+    background: #000000;
+    border-radius: 5px;
+    color: white;
+}
+
+.content {
+    margin-top: 5rem;
+}
+
+.content > h3 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 43px;
+    margin-bottom: 2rem;
+}
+
+.content > p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+
+    /* Gray Text */
+
+    color: #5c5b5b;
+    margin-bottom: 2rem;
+}

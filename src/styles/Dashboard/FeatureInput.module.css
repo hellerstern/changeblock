@@ -1,0 +1,27 @@
+.input {
+    border: 0.5px solid #5c5b5b;
+    border-radius: 4px;
+    padding-left: 0.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+
+    /* Gray */
+
+    color: #8b9bac;
+}
+
+.label {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+
+    /* Black 01 */
+
+    color: #000000;
+}
