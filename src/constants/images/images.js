@@ -14,6 +14,12 @@ import IMG_PLAY_ICON from "../../assets/images/play-icon.png";
 import IMG_EMAIL_ICON from "../../assets/images/email-icon.png";
 import IMG_FORM_ICON from "../../assets/images/form-icon.png";
 
+import IMG_ALLOW_LEFT from "../../assets/images/all-left.png";
+import IMG_VISA from "../../assets/images/visa.png";
+import IMG_PAYPAL from "../../assets/images/paypal.png";
+import IMG_MASTER_CARD from "../../assets/images/mastercard.png";
+import IMG_AMEX from "../../assets/images/amex.png";
+
 export {
   IMG_FILE_UPLOAD,
   IMG_ANA_DARK,
@@ -28,4 +34,9 @@ export {
   IMG_PLAY_ICON,
   IMG_EMAIL_ICON,
   IMG_FORM_ICON,
+  IMG_ALLOW_LEFT,
+  IMG_VISA,
+  IMG_PAYPAL,
+  IMG_MASTER_CARD,
+  IMG_AMEX,
 };

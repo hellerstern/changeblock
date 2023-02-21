@@ -5,6 +5,7 @@ import DashboardNavbar from "../Components/Dashboard/DashboardNavbar";
 import Heading from "../Components/Dashboard/Heading";
 import Main from "../Components/Dashboard/Main";
 import Sidebar from "../Components/Dashboard/Sidebar";
+import Subscription from "../Components/Dashboard/Subscription";
 import firebase from "firebase/compat/app";
 import "firebase/compat/auth";
 import AnalysisHistory from "../Components/Dashboard/AnalysisHistory";
@@ -74,6 +75,10 @@ const Dashboard = () => {
     );
   }
 
+  // useEffect(() => {
+  //   alert("wat");
+  // }, [selectedSidebarTab]);
+
   return (
     <div style={{ background: "#F4F5FB" }}>
       <DashboardNavbar user={user} />
@@ -133,21 +138,9 @@ const Dashboard = () => {
           );
         } else if (selectedSidebarTab === "Subscription") {
           return (
-            <Container>
-              <DivSidebar flag={myContext.sbFlag}>
-                <Sidebar
-                  selectedSidebarTab={selectedSidebarTab}
-                  setSelectedSidebarTab={setSelectedSidebarTab}
-                />
-              </DivSidebar>
-
-              {/* <div className="col-9">
-                    <div className="container py-3">
-                        <Heading />
-                        <Main />
-                    </div>
-                </div> */}
-            </Container>
+            <Subscription
+              setSelectedSidebarTab={setSelectedSidebarTab}
+            ></Subscription>
           );
         } else if (selectedSidebarTab === "HelpAndSupport") {
           return (
