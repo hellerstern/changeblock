@@ -63,7 +63,11 @@ const Subscription = (props) => {
                 <Button1 style={{ marginRight: "28px" }}>
                   Cancel Renewal
                 </Button1>
-                <Button2>Cancel Renewal</Button2>
+                <Button2
+                  onClick={() => props.setSelectedSidebarTab("upgrade-plan")}
+                >
+                  Upgrade Plan
+                </Button2>
               </div>
               <SplitDiv></SplitDiv>
               <p className="general">Your next payment is $50</p>
@@ -96,6 +100,11 @@ const Subscription = (props) => {
               <div className="visa-info">
                 <h2 className="bill-label">Billing Information</h2>
                 <Button1>Update Information</Button1>
+                <CustomModal
+                  flag={upt_py_mth}
+                  setFlag={set_upt_py_mth}
+                  children={<CardUpdateForm set_upt_py_mth={set_upt_py_mth} />}
+                ></CustomModal>
               </div>
               <p className="general">Customer Name - John Doe</p>
               <p className="general">Email- Johndoe@gmail.com</p>

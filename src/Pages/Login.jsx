@@ -17,7 +17,6 @@ const Login = () => {
     const provider = new firebase.auth.GoogleAuthProvider();
     try {
       const result = await firebase.auth().signInWithPopup(provider);
-      // console.log(result.user);
       navigate("/dashboard");
     } catch (error) {
       setError(error.message);

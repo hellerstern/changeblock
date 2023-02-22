@@ -20,6 +20,10 @@ import IMG_PAYPAL from "../../assets/images/paypal.png";
 import IMG_MASTER_CARD from "../../assets/images/mastercard.png";
 import IMG_AMEX from "../../assets/images/amex.png";
 
+import IMG_RING from "../../assets/images/ring.png";
+import IMG_PROFILE from "../../assets/images/profile.png";
+import IMG_EYE_OFF from "../../assets/images/eye-off.png";
+
 export {
   IMG_FILE_UPLOAD,
   IMG_ANA_DARK,
@@ -39,4 +43,7 @@ export {
   IMG_PAYPAL,
   IMG_MASTER_CARD,
   IMG_AMEX,
+  IMG_RING,
+  IMG_PROFILE,
+  IMG_EYE_OFF,
 };

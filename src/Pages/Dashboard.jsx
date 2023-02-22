@@ -14,6 +14,8 @@ import { RotatingLines } from "react-loader-spinner";
 import { IMG_SUB_BACK } from "../constants/images/images";
 import InformDiv from "../Components/Dashboard/InformDiv";
 import HelpContract from "../Components/Dashboard/HelpContact";
+import Profile from "../Components/Profile/Profile";
+import UpgradePlan from "../Components/UpgradePlan/UpgradePlan";
 
 const Dashboard = () => {
   const myContext = useContext(AppContext);
@@ -81,7 +83,10 @@ const Dashboard = () => {
 
   return (
     <div style={{ background: "#F4F5FB" }}>
-      <DashboardNavbar user={user} />
+      <DashboardNavbar
+        user={user}
+        setSelectedSidebarTab={setSelectedSidebarTab}
+      />
       {(() => {
         if (selectedSidebarTab === "Dashboard") {
           return (
@@ -165,6 +170,18 @@ const Dashboard = () => {
                 </div>
               </div>
             </Container>
+          );
+        } else if (selectedSidebarTab === "profile") {
+          return (
+            <Profile setSelectedSidebarTab={setSelectedSidebarTab}></Profile>
+          );
+        } else if (selectedSidebarTab === "notifi") {
+          return <h1>Notification</h1>;
+        } else if (selectedSidebarTab === "upgrade-plan") {
+          return (
+            <UpgradePlan
+              setSelectedSidebarTab={setSelectedSidebarTab}
+            ></UpgradePlan>
           );
         }
       })()}
