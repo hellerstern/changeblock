@@ -3,15 +3,19 @@ import styled from "styled-components";
 import { toast } from "react-toastify";
 import { BsCheck2 } from "react-icons/bs";
 import CustomModal from "../Modal/CustomModal";
+import BillInfo from "../BillInfo/BillInfo";
 import CardUpdateForm from "../CardUpdateForm/CardUpdateForm";
 import {
   IMG_ALLOW_LEFT,
   IMG_VISA,
   IMG_FILE_UPLOAD,
 } from "../../constants/images/images";
+import ConfirmCancelRenewal from "../ConfirmCancelRenewal/ConfirmCancelRenewal";
 
 const Subscription = (props) => {
   const [upt_py_mth, set_upt_py_mth] = useState(false);
+  const [upt_info, set_upt_info] = useState(false);
+  const [cal_rene, set_cal_rene] = useState(false);
 
   const theader = [
     "Date",
@@ -60,9 +64,23 @@ const Subscription = (props) => {
               <p className="label-1">Subscription renewal data</p>
               <h2 className="label-2">February 2nd, 2023</h2>
               <div className="buttons">
-                <Button1 style={{ marginRight: "28px" }}>
+                <Button1
+                  style={{ marginRight: "28px" }}
+                  onClick={() => set_cal_rene(!cal_rene)}
+                >
                   Cancel Renewal
                 </Button1>
+
+                <CustomModal
+                  flag={cal_rene}
+                  setFlag={set_cal_rene}
+                  children={
+                    <ConfirmCancelRenewal
+                      setFlag={set_cal_rene}
+                    ></ConfirmCancelRenewal>
+                  }
+                ></CustomModal>
+
                 <Button2
                   onClick={() => props.setSelectedSidebarTab("upgrade-plan")}
                 >
@@ -99,11 +117,17 @@ const Subscription = (props) => {
               <SplitDiv></SplitDiv>
               <div className="visa-info">
                 <h2 className="bill-label">Billing Information</h2>
-                <Button1>Update Information</Button1>
+                <Button1
+                  onClick={() => {
+                    set_upt_info(!upt_info);
+                  }}
+                >
+                  Update Information
+                </Button1>
                 <CustomModal
-                  flag={upt_py_mth}
-                  setFlag={set_upt_py_mth}
-                  children={<CardUpdateForm set_upt_py_mth={set_upt_py_mth} />}
+                  flag={upt_info}
+                  setFlag={set_upt_info}
+                  children={<BillInfo setFlag={set_upt_info}></BillInfo>}
                 ></CustomModal>
               </div>
               <p className="general">Customer Name - John Doe</p>
