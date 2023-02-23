@@ -66,7 +66,9 @@ const Subscription = (props) => {
               <div className="buttons">
                 <Button1
                   style={{ marginRight: "28px" }}
-                  onClick={() => set_cal_rene(!cal_rene)}
+                  onClick={() => {
+                    set_cal_rene(!cal_rene);
+                  }}
                 >
                   Cancel Renewal
                 </Button1>

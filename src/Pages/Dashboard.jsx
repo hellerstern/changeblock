@@ -16,6 +16,7 @@ import InformDiv from "../Components/Dashboard/InformDiv";
 import HelpContract from "../Components/Dashboard/HelpContact";
 import Profile from "../Components/Profile/Profile";
 import UpgradePlan from "../Components/UpgradePlan/UpgradePlan";
+import BillingInfo from "../Components/BillingInfo/BillingInfo";
 
 const Dashboard = () => {
   const myContext = useContext(AppContext);
@@ -182,6 +183,12 @@ const Dashboard = () => {
             <UpgradePlan
               setSelectedSidebarTab={setSelectedSidebarTab}
             ></UpgradePlan>
+          );
+        } else if (selectedSidebarTab === "BillingInfo") {
+          return (
+            <BillingInfo
+              setSelectedSidebarTab={setSelectedSidebarTab}
+            ></BillingInfo>
           );
         }
       })()}

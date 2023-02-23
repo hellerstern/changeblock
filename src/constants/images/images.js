@@ -23,6 +23,8 @@ import IMG_AMEX from "../../assets/images/amex.png";
 import IMG_RING from "../../assets/images/ring.png";
 import IMG_PROFILE from "../../assets/images/profile.png";
 import IMG_EYE_OFF from "../../assets/images/eye-off.png";
+import IMG_ELEC_ICON from "../../assets/images/elec-icon.png";
+import IMG_CHECK_ICON from "../../assets/images/check-icon.png";
 
 export {
   IMG_FILE_UPLOAD,
@@ -46,4 +48,6 @@ export {
   IMG_RING,
   IMG_PROFILE,
   IMG_EYE_OFF,
+  IMG_ELEC_ICON,
+  IMG_CHECK_ICON,
 };

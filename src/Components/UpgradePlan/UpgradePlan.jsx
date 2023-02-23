@@ -71,7 +71,7 @@ const UpgradePlan = (props) => {
       <Container>
         <AllowBack
           onClick={() => {
-            props.setSelectedSidebarTab("AnalysisHistory");
+            props.setSelectedSidebarTab("Subscription");
           }}
         >
           <img src={IMG_ALLOW_LEFT}></img>
@@ -89,8 +89,11 @@ const UpgradePlan = (props) => {
                 <h2 className="index-label">{item.name}</h2>
                 <h2 className="price">${item.price}</h2>
                 <h2 className="desc">{item.name}</h2>
-                <button>Buy Now</button>
-
+                <button
+                  onClick={() => props.setSelectedSidebarTab("BillingInfo")}
+                >
+                  Buy Now
+                </button>
                 <div className="items">
                   {item.items.map((sItem, sIndex) => (
                     <div className="item" key={sIndex}>

@@ -1,6 +1,6 @@
 let env = "production";
 // let env = "local";
-export let origin = env === "production" ? "" : "http://localhost:8000";
+export let origin = env === "production" ? "" : "https://18.221.164.63/";
 // export let origin = process.env.REACT_APP_MAIN_END_POINT;
 
 export const ApiUrls = {
