@@ -4,12 +4,12 @@ import { Document, Page, Text, View, StyleSheet } from "@react-pdf/renderer";
 // Create styles
 const styles = StyleSheet.create({
     page: {
-        flexDirection: "row",
+        flexDirection: "column",
         backgroundColor: "#E4E4E4",
     },
     section: {
-        margin: 10,
-        padding: 10,
+        margin: 30,
+        padding: 20,
         flexGrow: 1,
     },
 });
