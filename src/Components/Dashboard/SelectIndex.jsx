@@ -10,7 +10,7 @@ const SelectIndex = ({ randomIndex, handleIndexChange }) => {
                     handleIndexChange();
                 }}
             >
-                Random Index
+                Random Project
             </button>
         </div>
     );

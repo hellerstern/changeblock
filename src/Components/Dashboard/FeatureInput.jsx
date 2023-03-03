@@ -8,6 +8,7 @@ const FeatureInput = ({
   handleFeaturesChange,
   featuresDescription,
 }) => {
+  console.log("featuresInput: ", featuresInput);
   useEffect(() => {
     handleFeaturesChange();
     console.log(featuresDescription);

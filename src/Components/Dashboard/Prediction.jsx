@@ -15,7 +15,7 @@ const Prediction = ({ randomIndex, prediction, piechart }) => {
 
     return (
         <div className="p-3">
-            <label>Selected Index</label>
+            <label>Select project</label>
             <br />
             <input placeholder={randomIndex} size={40} disabled={true} />
             <table class="table my-3">

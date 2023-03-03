@@ -7,11 +7,16 @@ export const ApiUrls = {
     GetRandomIndex: origin + "/api/random-index",
     GetPrediction: origin + "/api/get-pred-proba",
     GetPieChart: origin + "/api/pie-chart",
-    GetFeaturesInput: origin + "/api/get-features-input",
-    GetContributionPlot: origin + "/api/get-contribution-plot",
-    GetContribSummary: origin + "/api/get-contrib-summary",
+    GetFeaturesInput: "http://174.138.188.39:8000/api/get-features-input",
+    GetContributionPlot: "http://174.138.188.39:8000/api/get-contribution-plot",
+    GetContribSummary: "http://174.138.188.39:8000/api/get-contrib-summary",
+    // GetFeaturesInput: origin + "/api/get-features-input",
+    // GetContributionPlot: origin + "/api/get-contribution-plot",
+    // GetContribSummary: origin + "/api/get-contrib-summary",
     GetNer: origin + "/api/ner",
-    GetSummary: origin + "/api/get-summary",
+    GetSummary: "http://174.138.188.39:8000/api/get-summary",
     GetFeatureSummary: "http://174.138.188.39:8000/api/get-feature-importance",
-    GetExpertAdvice: origin + "/api/get-expert-advice",
+    GetExpertAdvice: "http://174.138.188.39:8000/api/get-expert-advice",
 };
+
+// "mongodb+srv://cluster0.ghvicx9.mongodb.net/myFirstDatabase"

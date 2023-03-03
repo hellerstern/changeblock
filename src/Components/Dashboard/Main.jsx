@@ -146,7 +146,8 @@ const Main = ({ selectedTab, setSelectedTab }) => {
 
     const getFeaturesInput = () => {
         backend.GetFeaturesInput(randomIndex).then((res) => {
-            console.log(res.data);
+            console.log("features: ", res.data["features"]);
+            console.log("descp: ", res.data["features_description"]);
             setFeaturesInput(res.data["features"]);
             setFeaturesDescription(res.data["features_description"]);
         });
@@ -215,25 +216,28 @@ const Main = ({ selectedTab, setSelectedTab }) => {
         backend
             .GetFeatureSummary(featuresInput, prediction[0], prediction[1])
             .then((res) => {
-              let str = res.data.feature_explanation;
+              let str = res.data.feature_explanation.toString();
+              console.log('summary: ', str);
               const matches = str.match(/\d+\.\d+/g);
+              debugger;
               const rounds = [];
-              for (let i = 0; i < matches.length; i++) {
+              for (let i = 0; i < matches?.length; i++) {
                 rounds.push(Number(matches[i]).toFixed(1));
               }
-              for (let i = 0; i < matches.length; i++) {
+              for (let i = 0; i < matches?.length; i++) {
                 str = str.replace(matches[i], rounds[i].toString());
               }
               setFeatureSummary(str);
             })
             .then((res) => {
                 handleExpertAdviseOutput(featureSummary);
-            });
+            })
     };
 
     const handleExpertAdviseOutput = (explanation) => {
         backend.GetExpertAdvice(explanation).then((res) => {
             setAdviseSummary(res.data.expert_advise);
+            debugger;
             setLoadingFeatureSummary(false);
         });
     };
@@ -330,9 +334,9 @@ const Main = ({ selectedTab, setSelectedTab }) => {
                             <div className="row">
                                 <div className="col-6">
                                     <ChartBox
-                                        heading={"Select Index"}
+                                        heading={"Select project"}
                                         subheading={
-                                            "Select from list or pick at random"
+                                            ""
                                         }
                                         children={
                                             <SelectIndex
@@ -548,6 +552,8 @@ const Main = ({ selectedTab, setSelectedTab }) => {
                                                 className={
                                                     styles.upload_wrapper
                                                 }
+
+                                                style={{display: 'flex', alignItems: 'center', justifyContent: "center"}}
                                             >
                                               <FileUploader
                                                 handleInformationFile={handleInformationFile}

@@ -2,7 +2,7 @@ import styled, { css } from "styled-components";
 import { IMG_ALLOW_LEFT } from "../../constants/images/images";
 import { BsCheckCircle, BsCheckLg } from "react-icons/bs";
 
-const UpgradePlan = (props) => {
+const Upgradeplanforpricing = (props) => {
   const plan_datas = [
     {
       flag: 0,
@@ -69,20 +69,8 @@ const UpgradePlan = (props) => {
   return (
     <Wrapper>
       <Container>
-        <AllowBack
-          onClick={() => {
-            props.setSelectedSidebarTab("Subscription");
-          }}
-        >
-          <img src={IMG_ALLOW_LEFT}></img>
-          <span>Back</span>
-        </AllowBack>
 
         <Subscription>
-          <span className="sub-label">
-            <h3>Subscription</h3>
-            <p>Select a plan best suits your needs</p>
-          </span>
           <div className="main-sub">
             {plan_datas.map((item, index) => (
               <SubIndex key={index} flag={item.flag}>
@@ -186,18 +174,6 @@ const Container = styled.div`
     line-height: 19px;
     padding: 17px 30px;
   }
-`;
-
-const AllowBack = styled.div`
-  cursor: pointer;
-  img {
-    margin-right: 10px;
-  }
-  span {
-    font-size: 16px;
-    line-height: 19px;
-  }
-  margin-bottom: 50px;
 `;
 
 const Subscription = styled.div`
@@ -376,4 +352,4 @@ const PlanCTable = styled.table`
   }
 `;
 
-export default UpgradePlan;
+export default Upgradeplanforpricing;

@@ -1,10 +1,10 @@
 .pricing_header{
     padding: 100px;
+    padding-bottom: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #F2F4FB;
-    height: 600px;
 }
 .princing_header_heading{
     width: 80%;
@@ -16,18 +16,18 @@
     margin-bottom: 30px;
 }
 .princing_header_text{
-font-size: 20px;
-font-weight: 600;
-text-align: center;
-color: #000000;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    color: #000000;
 }
 .pricing_toggle{
     background: #FFFFFF;
-border: 1px solid rgba(139, 155, 172, 0.2);
-border-radius: 5px;
-display: flex;
-padding: 23px 40px;
-margin-top: 20px;
+    border: 1px solid rgba(139, 155, 172, 0.2);
+    border-radius: 5px;
+    display: flex;
+    padding: 23px 40px;
+    margin-top: 20px;
 }
 .pricing_toggle p{
     margin: 0;

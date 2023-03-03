@@ -1,5 +1,14 @@
 .App {
   overflow-x: hidden;
+  
   /* max-width: 1440px;
   margin: auto; */
+}
+
+/* .modebar modebar--hover ease-bg {
+  top: '30px !important'
+} */
+
+.modebar-container {
+  border: 1px solid red;
 }
