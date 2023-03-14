@@ -1,3 +1,4 @@
+import { useState } from "react";
 import styled from "styled-components";
 import styles from "../../styles/Dashboard/InformationExtraction.module.css";
 import ChartBox from "./ChartBox";
@@ -15,6 +16,7 @@ const InformationExtraction = ({
   handleSummaryFile,
   handleFilesChosen,
 }) => {
+  const [fileName, setFileName] = useState();
   return (
     <div>
       <div className="d-flex justify-content-between">
@@ -32,6 +34,7 @@ const InformationExtraction = ({
             handleInformationFile={handleInformationFile}
             handleSummaryFile={handleSummaryFile}
             handleFilesChosen={handleFilesChosen}
+            setFileName={setFileName}
           />
           <div className="col-7 text-center">
             <div className={styles.info_box}>
@@ -49,7 +52,7 @@ const InformationExtraction = ({
           <div className="col-5 text-center mt-4">
             <div className={styles.cv_template}>
               <img src={IMG_FILE_UPLOAD} alt="upload button icon" />
-              <UploadLabel>Uploaded</UploadLabel>
+              <UploadLabel>{localStorage.getItem('fileName')}</UploadLabel>
             </div>
           </div>
           <div className="col-7 text-center">

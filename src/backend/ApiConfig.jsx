@@ -13,7 +13,7 @@ export const ApiUrls = {
     // GetFeaturesInput: origin + "/api/get-features-input",
     // GetContributionPlot: origin + "/api/get-contribution-plot",
     // GetContribSummary: origin + "/api/get-contrib-summary",
-    GetNer: origin + "/api/ner",
+    GetNer: "http://174.138.188.39:8000/api/ner",
     GetSummary: "http://174.138.188.39:8000/api/get-summary",
     GetFeatureSummary: "http://174.138.188.39:8000/api/get-feature-importance",
     GetExpertAdvice: "http://174.138.188.39:8000/api/get-expert-advice",

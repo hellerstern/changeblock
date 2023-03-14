@@ -47,11 +47,16 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media screen and (max-width: 1200px) {
+    flex-direction: column;
+  }
 `;
 
 const Container = styled.div`
   width: 49%;
-  background: #ffffff;
+  @media screen and (max-width: 1200px) {
+    width: 100%;
+  }
   border: 1px solid rgba(92, 91, 91, 0.1);
   border-radius: 5px;
   padding: 20px 30px;

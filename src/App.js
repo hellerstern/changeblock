@@ -7,6 +7,10 @@ import "./App.css";
 function App() {
   const [sbFlag, setSbFlag] = useState(true);
 
+  window.addEventListener('resize', (event) => {
+    if (event.currentTarget.innerWidth < 900 && sbFlag) setSbFlag(false);
+  })
+
   const provider = {
     sbFlag,
     setSbFlag,

@@ -27,6 +27,13 @@ const Wrapper = styled.div`
   border-radius: 5px;
   padding: 0 32px;
   margin-bottom: 30px;
+
+  @media screen and (max-width: 980px) {
+    flex-direction: column;
+    height: 170px;
+    justify-content: center;
+    align-items: flex-start;
+  }
   * {
     z-index: 1;
   }
@@ -65,6 +72,7 @@ const Wrapper = styled.div`
     outline: 0;
     padding: 11px 39px;
     margin-top: 20px;
+    white-space: nowrap;
   }
 `;
 

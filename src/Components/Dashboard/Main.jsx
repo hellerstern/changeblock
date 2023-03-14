@@ -18,6 +18,7 @@ import { IMG_FILE_UPLOAD } from "../../constants/images/images";
 import { CSVLink } from "react-csv";
 import Modal from "react-modal";
 import FileUploader from "./FileUploader";
+import axios from "axios";
 
 const customStyles = {
     content: {
@@ -85,6 +86,8 @@ const Main = ({ selectedTab, setSelectedTab }) => {
     function closeModal() {
         setIsOpenModal(false);
     }
+
+    const [fileName, setFileName] = useState();
 
     function getPlotDiv(chart) {
         return (
@@ -182,9 +185,27 @@ const Main = ({ selectedTab, setSelectedTab }) => {
         if (event.target.files[0].size > 0) {
             const formData = new FormData();
             formData.append("file", event.target.files[0]);
-            backend.GetNer(formData).then((res) => {
-                console.log(res.data);
-                setEntityData(res.data.entities);
+            backend.GetNer(formData).then(async (res) => {
+                console.log("Aspect based sentiment", res.data);
+                await axios.post('https://chatgpt-analysis.herokuapp.com/sentiment_analysis', {
+                    'user_content': res.data.text
+                }).then(response => {
+                    let entity = response.data.response.split(/\n/g);
+                    let result = [];
+                    for (let i = 0; i < entity.length; i++) {
+                        if (entity[i] !== '') {
+                            let splitData = entity[i].split(':');
+                            result.push(
+                                // [splitData[0]]: splitData[1]
+                                splitData
+                            )
+                        }
+                    }
+                    console.log(result);
+                    setEntityData(result);
+                }).then(err => {
+                    console.log('err', err);
+                })
             });
         }
     };
@@ -267,55 +288,57 @@ const Main = ({ selectedTab, setSelectedTab }) => {
 
     return (
         <div className={styles.box}>
-            <div className="d-flex justify-content-evenly">
-                <button
-                    className={
-                        selectedTab === "WhatIf"
-                            ? styles.btn_selected
-                            : styles.btn_unselected
-                    }
-                    onClick={() => {
-                        setSelectedTab("WhatIf");
-                    }}
-                >
-                    What-If
-                </button>
-                <button
-                    className={
-                        selectedTab === "InformationExtraction"
-                            ? styles.btn_selected
-                            : styles.btn_unselected
-                    }
-                    onClick={() => {
-                        setSelectedTab("InformationExtraction");
-                    }}
-                >
-                    Information Extraction
-                </button>
-                <button
-                    className={
-                        selectedTab === "Summary"
-                            ? styles.btn_selected
-                            : styles.btn_unselected
-                    }
-                    onClick={() => {
-                        setSelectedTab("Summary");
-                    }}
-                >
-                    Summarisation
-                </button>
-                <button
-                    className={
-                        selectedTab === "EntityExtraction"
-                            ? styles.btn_selected
-                            : styles.btn_unselected
-                    }
-                    onClick={() => {
-                        setSelectedTab("EntityExtraction");
-                    }}
-                >
-                    Aspect Based Sentiment
-                </button>
+            <div className={styles.btnDiv}>
+                <div className={styles.btnContainer}>
+                    <button
+                        className={
+                            selectedTab === "WhatIf"
+                                ? styles.btn_selected
+                                : styles.btn_unselected
+                        }
+                        onClick={() => {
+                            setSelectedTab("WhatIf");
+                        }}
+                    >
+                        What-If
+                    </button>
+                    <button
+                        className={
+                            selectedTab === "InformationExtraction"
+                                ? styles.btn_selected
+                                : styles.btn_unselected
+                        }
+                        onClick={() => {
+                            setSelectedTab("InformationExtraction");
+                        }}
+                    >
+                        Information Extraction
+                    </button>
+                    <button
+                        className={
+                            selectedTab === "Summary"
+                                ? styles.btn_selected
+                                : styles.btn_unselected
+                        }
+                        onClick={() => {
+                            setSelectedTab("Summary");
+                        }}
+                    >
+                        Summarisation
+                    </button>
+                    <button
+                        className={
+                            selectedTab === "EntityExtraction"
+                                ? styles.btn_selected
+                                : styles.btn_unselected
+                        }
+                        onClick={() => {
+                            setSelectedTab("EntityExtraction");
+                        }}
+                    >
+                        Aspect Based Sentiment
+                    </button>
+                </div>
             </div>
             <div className={styles.v1}></div>
 
@@ -543,7 +566,6 @@ const Main = ({ selectedTab, setSelectedTab }) => {
                             <p>
                                 Upload a document to get Aspect Based Sentiment{" "}
                             </p>
-
                             {!entityFile ? (
                                 <div className="row">
                                     <div className="col-5 text-center">
@@ -559,35 +581,8 @@ const Main = ({ selectedTab, setSelectedTab }) => {
                                                 handleInformationFile={handleInformationFile}
                                                 handleSummaryFile={handleSummaryFile}
                                                 handleFilesChosen={handleFilesChosen}
+                                                setFileName={setFileName}
                                               ></FileUploader>
-                                                {/* <img
-                                                    src="images/upload-button.png"
-                                                    alt="upload button icon"
-                                                />
-                                                <br />
-                                                <input
-                                                    type="file"
-                                                    multiple={false}
-                                                    accept="application/msword, application/pdf, application/vnd.openxmlformats-officedocument.wordprocessingml.document"
-                                                    className="ps-3 mt-1"
-                                                    onChange={handleFilesChosen}
-                                                /> */}
-                                                {/* <button
-                                                    className={`${styles.upload_btn}`}
-                                                    onClick={() =>
-                                                        setEntityFile("1")
-                                                    }
-                                                >
-                                                    Upload Document
-                                                </button> */}
-                                                {/* <br />
-                                                <label>or</label>
-                                                <br />
-                                                <label
-                                                    className={styles.browse}
-                                                >
-                                                    Browse Files
-                                                </label> */}
                                             </div>
                                         </div>
                                     </div>
@@ -610,7 +605,7 @@ const Main = ({ selectedTab, setSelectedTab }) => {
                                     <div className="col-5 text-center mt-4">
                                         <div className={styles.cv_template}>
                                         <img src={IMG_FILE_UPLOAD} alt="upload button icon" />
-                                        <UploadLabel>Uploaded</UploadLabel>
+                                        <UploadLabel>{localStorage.getItem('fileName')}</UploadLabel>
                                         </div>
                                     </div>
                                     <div className="col-7 text-center">
@@ -624,7 +619,7 @@ const Main = ({ selectedTab, setSelectedTab }) => {
                                                         <thead>
                                                             <tr>
                                                                 <th>
-                                                                    Named Entity
+                                                                    Aspect based sentiment
                                                                 </th>
                                                                 <th>
                                                                     Context and

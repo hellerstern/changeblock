@@ -14,14 +14,6 @@ const Profile = (props) => {
   return (
     <Wrapper>
       <Container>
-        <AllowBack
-          onClick={() => {
-            props.setSelectedSidebarTab("AnalysisHistory");
-          }}
-        >
-          <img src={IMG_ALLOW_LEFT}></img>
-          <span>Back</span>
-        </AllowBack>
         <h3 className="page-label">User Information</h3>
         <ProfileDiv>
           <div className="photo">
@@ -55,6 +47,14 @@ const Profile = (props) => {
           </div>
           <button> Change Password</button>
         </PasswordDiv>
+        <AllowBack
+          onClick={() => {
+            props.setSelectedSidebarTab("AnalysisHistory");
+          }}
+        >
+          <img src={IMG_ALLOW_LEFT}></img>
+          <span>Back</span>
+        </AllowBack>
       </Container>
     </Wrapper>
   );

@@ -11,7 +11,7 @@ const Sidebar = ({ setSelectedSidebarTab, selectedSidebarTab }) => {
     <Wrapper>
       <Container>
         <SidebarToggleButton
-          onClick={() => myContext.setSbFlag(!myContext.sbFlag)}
+          onClick={() => window.innerWidth >= 900 ? myContext.setSbFlag(!myContext.sbFlag) : undefined}
           flag={myContext.sbFlag}
         >
           <BsFillArrowLeftCircleFill></BsFillArrowLeftCircleFill>

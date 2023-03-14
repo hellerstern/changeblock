@@ -98,12 +98,12 @@ const Dashboard = () => {
                   setSelectedSidebarTab={setSelectedSidebarTab}
                 />
               </DivSidebar>
-
               <div
                 className="main-content"
                 style={{
                   minWidth: "calc(100vw - 260px)",
                   padding: "20px 30px",
+                  margin: 'auto'
                 }}
               >
                 <div className="container py-3">
@@ -159,13 +159,12 @@ const Dashboard = () => {
               </DivSidebar>
 
               <div
-                className="col-9"
                 style={{
-                  minWidth: "calc(100vw - 260px)",
-                  padding: "20px 30px",
+                  width: '100%',
+                  padding: "20px 00px",
                 }}
               >
-                <div className="container py-3">
+                <div className="container">
                   <InformDiv />
                   <HelpContract />
                 </div>

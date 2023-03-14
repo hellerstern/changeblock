@@ -8,10 +8,8 @@ const FeatureInput = ({
   handleFeaturesChange,
   featuresDescription,
 }) => {
-  console.log("featuresInput: ", featuresInput);
   useEffect(() => {
     handleFeaturesChange();
-    console.log(featuresDescription);
   }, [featuresInput]);
   const list = Object.keys(featuresInput).map((key, i) => (
     // <p key={i}>

@@ -1,10 +1,9 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import styled from "styled-components";
 import { IMG_FILE_UPLOAD } from "../../constants/images/images";
 import styles from "../../styles/Dashboard/InformationExtraction.module.css";
 
 const FileUploader = (props) => {
-  console.log(props);
   const uploader = useRef(null);
 
   function clickUploader() {
@@ -24,6 +23,7 @@ const FileUploader = (props) => {
             accept="application/msword, application/pdf, application/vnd.openxmlformats-officedocument.wordprocessingml.document"
             className="ps-3 mt-1"
             onChange={(e) => {
+              localStorage.setItem('fileName', e.target.files[0].name);
               props.handleInformationFile(e);
               props.handleSummaryFile(e);
               props.handleFilesChosen(e);
