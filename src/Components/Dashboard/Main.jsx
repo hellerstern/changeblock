@@ -19,6 +19,7 @@ import { CSVLink } from "react-csv";
 import Modal from "react-modal";
 import FileUploader from "./FileUploader";
 import axios from "axios";
+import ChatBot from "./Chatbot";
 
 const customStyles = {
     content: {
@@ -525,6 +526,13 @@ const Main = ({ selectedTab, setSelectedTab }) => {
                                                     </PDFDownloadLink>
                                                 </div>
                                             )
+                                        }
+                                    />
+
+                                    <ChartBox
+                                        heading={'Hello! How can we help?'}
+                                        children={
+                                            <ChatBot />
                                         }
                                     />
                                 </div>

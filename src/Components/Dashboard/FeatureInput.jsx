@@ -12,10 +12,6 @@ const FeatureInput = ({
     handleFeaturesChange();
   }, [featuresInput]);
   const list = Object.keys(featuresInput).map((key, i) => (
-    // <p key={i}>
-    //     <span>Key Name: </span>
-    //     <span>Value: </span>
-    // </p>
     <div>
       <label className="label">{key}</label>
       <br />
