@@ -194,6 +194,7 @@ const Main = ({ selectedTab, setSelectedTab }) => {
                     let entity = response.data.response.split(/\n/g);
                     let result = [];
                     for (let i = 0; i < entity.length; i++) {
+                        console.log('entity[i]: ', entity[i]);
                         if (entity[i] !== '') {
                             let splitData = entity[i].split(':');
                             result.push(

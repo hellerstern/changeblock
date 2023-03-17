@@ -170,7 +170,7 @@ export default class Api {
   }
 
   GetSummary(formData) {
-    return new Promise(function (resolve, reject) {
+    return new Promise(function (resolve,  reject) {
       axios 
         .post(ApiUrls.GetSummary, formData)
         .then(function (response) {
